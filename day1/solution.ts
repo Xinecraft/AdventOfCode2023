@@ -18,7 +18,6 @@ const REVERSED_STRING_NUMBERS_KEYS = STRING_NUMBERS_KEYS.map((number) => {
 });
 
 const raw = fs.readFileSync(INPUT_FILEPATH, "utf-8");
-
 const input = raw.split("\n");
 
 const convertStrToNumber = (item: string) => {
