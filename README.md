@@ -1,2 +1,13 @@
 # AdventOfCode2023
-Solving AoC2023 Problems
+Learning Python and more using AOC2023
+
+# Typescript
+```
+npm run dev day1/solution.ts
+npm run watch day1/solution.ts
+```
+
+# Python
+```
+python day1/solution.py
+```

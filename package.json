@@ -1,5 +1,13 @@
 {
+  "scripts": {
+    "watch": "tsx watch",
+    "dev": "tsx"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
   "devDependencies": {
-    "@types/node": "^20.10.2"
+    "@types/node": "^20.10.4",
+    "tsx": "^4.6.2"
   }
 }

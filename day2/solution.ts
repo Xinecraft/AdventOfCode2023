@@ -1,8 +1,7 @@
-import * as fs from "fs";
+import { readLineAsArray } from "../common/io";
 
-const INPUT_FILEPATH = "./input.txt";
-const raw = fs.readFileSync(INPUT_FILEPATH, "utf-8");
-const input = raw.split("\n");
+const INPUT_FILEPATH = "day2/input.txt";
+const input = readLineAsArray(INPUT_FILEPATH);
 
 const parsedInput = input.reduce((acc, line) => {
   const [gameName, gamesData] = line.split(":");

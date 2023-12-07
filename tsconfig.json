@@ -1,5 +1,7 @@
 {
-    "compilerOptions": {
-        "lib": ["ES2023"]
-    }
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "sourceMap": true
+  }
 }
