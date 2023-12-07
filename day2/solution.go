@@ -20,10 +20,10 @@ func splitInTwo(line, separator string) (string, string) {
 func rawItemsReducer(rawItems []string) map[string]int {
 	toReturn := make(map[string]int)
 	for _, item := range rawItems {
-		item = strings.Trim(item, " ")
+		item = strings.TrimSpace(item)
 		val, key := splitInTwo(item, " ")
 		parsedVal, _ := strconv.Atoi(val)
-		toReturn[key] = int(parsedVal)
+		toReturn[key] = parsedVal
 	}
 	return toReturn
 }
@@ -49,6 +49,7 @@ func main() {
 	}
 
 	partOne(parsedInput)
+	partTwo(parsedInput)
 }
 
 func partOne(input map[int]GameData) {
@@ -84,4 +85,26 @@ func partOne(input map[int]GameData) {
 	}
 
 	fmt.Println("PartOne", sum)
+}
+
+func partTwo(input map[int]GameData) {
+	result := 0
+	for _, gameData := range input {
+		minCubes := map[string]int{"red": 0, "green": 0, "blue": 0}
+
+		for _, draw := range gameData {
+			for key := range draw {
+				if draw[key] > minCubes[key] {
+					minCubes[key] = draw[key]
+				}
+			}
+		}
+
+		power := 1
+		for _, val := range minCubes {
+			power *= val
+		}
+		result += power
+	}
+	fmt.Println("PartTwo", result)
 }
