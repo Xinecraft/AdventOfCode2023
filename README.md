@@ -1,5 +1,5 @@
 # AdventOfCode2023
-Learning Rust, Go, Python & more of TS by solving Advent of Code 2023.
+Learning Go, Python & more of TS by solving Advent of Code 2023.
 
 # Typescript
 ```
@@ -15,9 +15,4 @@ python day2/solution.py
 # GoLang
 ```
 go day2/solution.go
-```
-
-# Rust
-```
-cargo run day2/solution.go
 ```
